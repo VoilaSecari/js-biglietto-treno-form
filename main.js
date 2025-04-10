@@ -4,6 +4,12 @@ const sconto20 = 20;
 const sconto40 = 40;
 
 const btnEl = document.getElementById("btn-calcolo");
+const nomeCognomeBigliettoEl = document.getElementById("nome-cognome-generati");
+const anniBigliettoEl = document.getElementById("anni-generati");
+const percorsoBigliettoEl = document.getElementById("percorso-generato");
+const carrozzaBigliettoEl = document.getElementById("carrozza");
+const postoBigliettoEl = document.getElementById("posto");
+const prezzoBigliettoEl = document.getElementById("prezzo");
 
 let isButtonClicked = false;
 btnEl.addEventListener("click", function () {
@@ -21,19 +27,22 @@ btnEl.addEventListener("click", function () {
     let prezzoBigliettoNoSconto = percorsoUtente * prezzoKm;
     let x = prezzoBigliettoNoSconto;
 
-    console.log(nomeUtente, cognomeUtente, anniUtente);
+    nomeCognomeBigliettoEl.innerText = nomeUtente + " " + cognomeUtente;
+    anniBigliettoEl.innerText = anniUtente + " anni";
+    percorsoBigliettoEl.innerText = percorsoUtente + "Km";
+
     // SCONTO 20
     if (anniUtente < 18) {
-      const bigliettoOk = x - sconto20 * (x / 100) + "€";
-      console.log(bigliettoOk);
+      const bigliettoOk = x - sconto20 * (x / 100);
+      prezzoBigliettoEl.innerText = parseInt(bigliettoOk).toFixed(2) + "€";
     } else if (anniUtente > 65) {
-      const bigliettoOk = x - sconto40 * (x / 100) + "€";
-      console.log(bigliettoOk);
+      const bigliettoOk = x - sconto40 * (x / 100);
+      prezzoBigliettoEl.innerText = parseInt(bigliettoOk).toFixed(2) + "€";
     } else {
-      console.log(prezzoBigliettoNoSconto + "€");
+      prezzoBigliettoEl.innerText =
+        parseInt(prezzoBigliettoNoSconto).toFixed(2) + "€";
     }
   } else {
     isButtonClicked = false;
-    console.log("Cancella dato");
   }
 });
