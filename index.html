@@ -57,108 +57,116 @@
 
     <!-- CORPO -->
     <main>
-      <div class="container-md">
-        <div class="row align-items-center">
-          <!-- CARD SX INPUT DATI -->
-          <div class="col-5 pt-5">
-            <div class="card p3">
-              <h6 class="card-title p-3 pb-0">Dati utente</h6>
+      <div class="bg-success-subtle min-vh-100">
+        <div class="container-md">
+          <div class="row align-items-center">
+            <!-- CARD SX INPUT DATI -->
+            <div class="col-5 pt-5">
+              <div class="card p3 shadow-sm">
+                <h6 class="card-title p-3 pb-0 text-success">Dati utente</h6>
 
-              <div class="card-body pt-2">
-                <!-- NOME -->
-                <div class="input-group input-group-sm mb-2">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nome"
-                    aria-plabel="Nome"
-                  />
-                  <!-- COGNOME -->
+                <div class="card-body pt-2">
+                  <!-- NOME -->
+                  <div class="input-group input-group-sm mb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nome"
+                      aria-plabel="Nome"
+                    />
+                    <!-- COGNOME -->
 
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Cognome"
-                    aria-label="Cognome"
-                  />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Cognome"
+                      aria-label="Cognome"
+                    />
+                  </div>
+                  <div class="input-group input-group-sm">
+                    <!-- ETA' -->
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Età"
+                      aria-label="Età"
+                    />
+                  </div>
                 </div>
-                <div class="input-group input-group-sm">
-                  <!-- ETA' -->
 
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Età"
-                    aria-label="Età"
-                  />
+                <!-- INPUT PERCORSO -->
+                <h6 class="card-title p-3 pb-0 text-success">Percorso</h6>
+
+                <div class="card-body pb-0 pt-2">
+                  <!-- KM -->
+                  <div class="input-group input-group-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Km"
+                      aria-plabel="Km"
+                    />
+                  </div>
                 </div>
-              </div>
-
-              <!-- INPUT PERCORSO -->
-              <h6 class="card-title p-3 pb-0">Percorso</h6>
-
-              <div class="card-body pb-0 pt-2">
-                <!-- KM -->
-                <div class="input-group input-group-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Km"
-                    aria-plabel="Km"
-                  />
-                </div>
-              </div>
-              <!-- BOTTONE GENERA TARIFFA -->
-              <div class="d-flex p-5 justify-content-center align-items-center">
-                <button class="btn btn-outline-success p-4">
-                  Calcola tariffa
-                </button>
-              </div>
-            </div>
-            <!-- FINE INPUT DATI -->
-          </div>
-          <!-- BIGLIETTO GENERATO JS -->
-          <div class="col pt-5">
-            <div class="card bg-light">
-              <!-- DATI UTENTE -->
-              <h6 class="card-title p-3 pb-0 fw-semibold">Dati utente</h6>
-              <!-- togliere .italic e rendere .text-success appena ci sono i dati con JS -->
-              <p class="px-3 py-0 mb-1 text-secondary fst-italic fw-lighter">
-                Nome e Cognome
-              </p>
-              <p class="px-3 py-0 mb-1 text-secondary fst-italic fw-lighter">
-                Età
-              </p>
-              <hr class="mx-3" />
-
-              <!-- PERCORSO -->
-              <h6 class="card-title p-3 pb-0 fw-semibold">Percorso</h6>
-              <!-- dtogliere .italic e rendere .text-success appena ci sono i dati con JS -->
-              <div class="d-flex">
-                <p
-                  class="ps-3 pe-1 py-0 mb-1 text-secondary fst-italic fw-lighter"
+                <!-- BOTTONE GENERA TARIFFA -->
+                <div
+                  class="d-flex p-5 justify-content-center align-items-center"
                 >
-                  00 Km
-                </p>
+                  <button class="btn btn-outline-success p-4">
+                    Calcola tariffa
+                  </button>
+                </div>
               </div>
-              <hr class="mx-3" />
+              <!-- FINE INPUT DATI -->
+            </div>
+            <!-- BIGLIETTO GENERATO JS -->
+            <div class="col pt-5">
+              <div class="card bg-light">
+                <!-- DATI UTENTE -->
+                <h6 class="card-title p-3 pb-0 fw-semibold">Dati utente</h6>
+                <!-- togliere .italic e rendere .text-success appena ci sono i dati con JS -->
+                <p class="px-3 py-0 mb-1 text-secondary fst-italic fw-lighter">
+                  Nome e Cognome
+                </p>
+                <p class="px-3 py-0 mb-1 text-secondary fst-italic fw-lighter">
+                  Età
+                </p>
+                <hr class="mx-3" />
 
-              <!-- BIGLIETTO -->
-              <h6 class="card-title p-3 pb-0 fw-semibold">Dati biglietto</h6>
-              <div class="d-flex">
-                <div class="col">
-                  <p class="ps-3 mb-1 text-secondary">Carrozza</p>
-                  <p class="ps-3 py-0 text-secondary fst-italic fw-bold">N°</p>
-                </div>
-                <div class="col">
-                  <p class="ps-3 mb-1 text-secondary">Posto</p>
-                  <p class="ps-3 py-0 text-secondary fst-italic fw-bold">N°</p>
-                </div>
-                <div class="col">
-                  <p class="ps-3 mb-1 text-secondary">Prezzo</p>
-                  <p class="ps-3 py-0 text-secondary fst-italic fw-bold">
-                    00,00 €
+                <!-- PERCORSO -->
+                <h6 class="card-title p-3 pb-0 fw-semibold">Percorso</h6>
+                <!-- dtogliere .italic e rendere .text-success appena ci sono i dati con JS -->
+                <div class="d-flex">
+                  <p
+                    class="ps-3 pe-1 py-0 mb-1 text-secondary fst-italic fw-lighter"
+                  >
+                    00 Km
                   </p>
+                </div>
+                <hr class="mx-3" />
+
+                <!-- BIGLIETTO -->
+                <h6 class="card-title p-3 pb-0 fw-semibold">Dati biglietto</h6>
+                <div class="d-flex">
+                  <div class="col">
+                    <p class="ps-3 mb-1 text-secondary">Carrozza</p>
+                    <p class="ps-3 py-0 text-secondary fst-italic fw-bold">
+                      N°
+                    </p>
+                  </div>
+                  <div class="col">
+                    <p class="ps-3 mb-1 text-secondary">Posto</p>
+                    <p class="ps-3 py-0 text-secondary fst-italic fw-bold">
+                      N°
+                    </p>
+                  </div>
+                  <div class="col">
+                    <p class="ps-3 mb-1 text-secondary">Prezzo</p>
+                    <p class="ps-3 py-0 text-secondary fst-italic fw-bold">
+                      00,00 €
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
